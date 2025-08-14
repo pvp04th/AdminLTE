@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $host = "localhost";
 $user = "root"; // หรือชื่อผู้ใช้ฐานข้อมูลของคุณ
 $pass = "";     // ถ้าใช้ XAMPP ปกติไม่ต้องใส่รหัสผ่าน
